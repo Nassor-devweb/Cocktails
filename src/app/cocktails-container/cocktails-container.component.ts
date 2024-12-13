@@ -40,7 +40,7 @@ export class CocktailsContainerComponent implements OnInit, OnDestroy {
     });
   }
 
-  public getCocktailSelected(event: any) {
-    this.cocktailSelected = event;
+  public getCocktailSelected(index: number) {
+    this.cocktailsService.selectCocktail(index);
   }
 }

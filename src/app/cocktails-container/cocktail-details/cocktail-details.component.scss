@@ -10,3 +10,17 @@ button {
 .cocktailDescription {
   text-align: justify;
 }
+
+.list-ingredient {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-ingredient-container {
+  margin-top: 1rem;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-between;
+}

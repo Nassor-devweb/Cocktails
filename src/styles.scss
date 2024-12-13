@@ -126,12 +126,20 @@ body {
   }
 }
 
+.active {
+  background-color: var(--secondary);
+}
+
 .mb-20 {
   margin-bottom: 2rem;
 }
 
 .mt20 {
   margin-top: 2rem;
+}
+
+.mt10 {
+  margin-top: 1rem;
 }
 
 .mb-10 {

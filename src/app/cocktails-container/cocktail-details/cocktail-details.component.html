@@ -2,5 +2,14 @@
   <img [src]="cocktail.img" alt="" />
   <h3>{{ cocktail.name }}</h3>
   <p class="cocktailDescription">{{ cocktail.description }}</p>
-  <button class="btn btn-primary mt20">Editer le cocktail</button>
+  <ul class="list-primary list-ingredient-container">
+    <li class="list-ingredient" *ngFor="let ingredient of cocktail.ingredients">
+      <span>{{ ingredient.name }}</span>
+      <span>{{ ingredient.quantity }}g</span>
+    </li>
+  </ul>
+  <div class="btnContainer mt10">
+    <button class="btn btn-primary">Editer le cocktail</button>
+    <button class="btn btn-primary">Ajouter au panier</button>
+  </div>
 </div>

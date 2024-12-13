@@ -2,3 +2,9 @@
   background-color: var(--primary);
   color: white;
 }
+
+li {
+  &:hover {
+    color: white!important;
+  }
+}

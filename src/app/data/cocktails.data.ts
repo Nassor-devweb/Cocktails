@@ -1,6 +1,6 @@
 import { Cocktails } from '../shared/interface/cocktail.interface';
 
-export const cocktails: Cocktails[] = [
+export const cocktails: any = [
   {
     name: 'Mojito',
     img: 'https://media.istockphoto.com/id/513583922/fr/photo/sombre-et-orageuse-cocktail-%C3%A0-base-de-rhum.webp?a=1&b=1&s=612x612&w=0&k=20&c=LltpV20jLN9aXD3IvEznxERGnNDHDJ81_CJyuyddytg=',

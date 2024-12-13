@@ -7,8 +7,10 @@ nav {
   }
 
   li {
+    margin-left: 1rem;
     &:hover {
       background-color: var(--secondary);
+      cursor: pointer;
     }
   }
 }

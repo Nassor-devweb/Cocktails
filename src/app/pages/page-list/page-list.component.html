@@ -1,0 +1,8 @@
+<li *ngFor="let cocktail of cocktails; let index = index">
+  <span>
+    <strong [routerLink]="[index]" [fragment]="index.toString()" class="name">{{
+      cocktail.name
+    }}</strong>
+  </span>
+</li>
+<router-outlet></router-outlet>
