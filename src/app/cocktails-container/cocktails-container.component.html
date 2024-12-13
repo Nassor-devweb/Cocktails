@@ -1,0 +1,9 @@
+<div class="container">
+  <app-cocktail-list
+    (cocktailSelectedEmit)="getCocktailSelected($event)"
+    class="flex-fill pr10"
+  >
+  </app-cocktail-list>
+  <app-cocktail-details [cocktail]="cocktailSelected" class="flex-fill pl10">
+  </app-cocktail-details>
+</div>

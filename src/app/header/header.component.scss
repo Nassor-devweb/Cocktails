@@ -1,0 +1,14 @@
+nav {
+  padding: 0.5rem;
+  background-color: var(--primary);
+  color: white;
+  .logo {
+    font-weight: 700;
+  }
+
+  li {
+    &:hover {
+      background-color: var(--secondary);
+    }
+  }
+}

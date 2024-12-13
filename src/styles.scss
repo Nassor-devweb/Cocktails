@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family : "Roboto", "sans-serif";
+  --primary : #546de5 ;
+  --secondary : #778beb;
+  --accent : #e77f67;
+  --laghtgray : #ddd;
+  --text-regular : #444;
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font-family) ;
+  font-size: 1.6rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-justify-content-between {
+  justify-content: space-between;
+}
+
+.flex-justify-content-center {
+  justify-content: center;
+}
+
+.flex-fill {
+  flex: 1;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Background semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 6000; /* Assurez-vous que la modale soit au-dessus d'autres éléments */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  min-width: 60rem;
+  max-width: 50%;
+  min-height: max-content;
+  text-align: center;
+  position: relative;
+}
+
+.pr10 {
+  padding-right: 1rem;
+}
+
+.pl10 {
+  padding-left: 1rem;
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  background-color: white;
+  border: 0;
+  border-radius: 3px;
+  font-weight: 700;
+  &-primary {
+    background-color: var(--primary);
+    color: white;
+    &:hover {
+      background-color: var(--secondary);
+      cursor: pointer;
+    }
+  }
+}
+
+.list-primary {
+  li {
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--laghtgray);
+    border-top: 0;
+    &:hover {
+      background-color: var(--primary);
+      color: white;
+      cursor: pointer;
+    }
+  }
+  li:first-child {
+    border-top: 1px solid var(--laghtgray);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  li:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+
+.mb-20 {
+  margin-bottom: 2rem;
+}
+
+.mt20 {
+  margin-top: 2rem;
+}
+
+.mb-10 {
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 120rem;
+  margin: auto;
+  display: flex;
+  padding: 1rem;
+}
+
+.flex-align-items-center {
+  align-items: center;
+}
+
+.p10 {
+  padding: 1rem;
+}
+
+.p15 {
+  padding: 1.5rem;
+}
+
+.p20 {
+  padding: 2rem;
+}
+
+.m10 {
+  margin : 1rem;
+}
+
+.m20 {
+  margin: 2rem;
+}
+
+//debug
+
+.d1 {
+  border: 1px solid red;
+}
+
+.d2 {
+  border : 1px solid green;
+}
