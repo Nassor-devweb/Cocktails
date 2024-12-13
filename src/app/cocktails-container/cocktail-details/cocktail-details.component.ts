@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Cocktails } from '../../shared/interface/cocktail.interface';
+import { PanierService } from '../../shared/services/panier.service';
 
 @Component({
   selector: 'app-cocktail-details',
@@ -10,4 +11,10 @@ import { Cocktails } from '../../shared/interface/cocktail.interface';
 })
 export class CocktailDetailsComponent {
   @Input('cocktail') public cocktail!: Cocktails;
+
+  constructor(private panierService: PanierService) {}
+
+  public addIngredient() {
+    this.panierService.addIngredient([...this.cocktail.ingredients]);
+  }
 }
