@@ -2,9 +2,14 @@
   <app-cocktail-list
     (cocktailSelectedEmit)="getCocktailSelected($event)"
     [cocktailSelected]="cocktailSelected"
+    [cocktails]="cocktails"
     class="flex-fill pr10"
   >
   </app-cocktail-list>
-  <app-cocktail-details [cocktail]="cocktailSelected" class="flex-fill pl10">
-  </app-cocktail-details>
+
+  <div class="flex-fill cocktailDetails">
+    <router-outlet></router-outlet>
+    <!-- <app-cocktail-details [cocktail]="cocktailSelected" class="flex-fill pl10">
+    </app-cocktail-details> -->
+  </div>
 </div>

@@ -40,6 +40,15 @@ body {
   flex-direction: row;
 }
 
+input {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 0.8rem 1.5rem;
+  &:focus {
+    outline: 1px solid var(--primary);
+  }
+}
+
 .flex-column {
   flex-direction: column;
 }
@@ -102,6 +111,20 @@ body {
       cursor: pointer;
     }
   }
+  &-secondary {
+    background-color: #ddd;
+  }
+}
+
+button:disabled {
+  opacity: 0.5;
+  &:hover {
+    cursor: not-allowed!important;
+  }
+}
+
+img {
+  object-fit: cover;
 }
 
 .list-primary {

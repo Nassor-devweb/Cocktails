@@ -19,11 +19,15 @@ import { cocktails } from '../../data/cocktails.data';
 })
 export class CocktailListComponent {
   public currentCocktailSelected!: HTMLLIElement;
+
   @ViewChildren('childrenNode') public childrenNode!: QueryList<
     ElementRef<HTMLLIElement>
   >;
+
   @Input('cocktailSelected') public cocktailSelected!: Cocktails;
-  public cocktails: Cocktails[] = cocktails;
+
+  @Input('cocktails') public cocktails!: Cocktails[];
+
   @Output('cocktailSelectedEmit')
   public cocktailSelectedEmit: EventEmitter<number> = new EventEmitter();
 

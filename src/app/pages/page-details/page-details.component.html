@@ -1,3 +1,17 @@
-<p [style.marginTop]="'3rem'" [style.marginLeft]="'3rem'">
-  click sur {{ currentId }}
-</p>
+<form [formGroup]="form">
+  <div class="form-group">
+    <label for="nom">Nom</label>
+    <input type="text" formControlName="nom" />
+  </div>
+
+  <!-- Ajouter un conteneur formGroup pour hobbies -->
+  <div formArrayName="hobbies" class="form-group">
+    <div *ngFor="let hobbie of hobbies.controls; let i = index">
+      <input type="text" [formControlName]="i" />
+    </div>
+  </div>
+
+  <button class="btn btn-primary" type="button" (click)="addControl()">
+    Ajouter
+  </button>
+</form>

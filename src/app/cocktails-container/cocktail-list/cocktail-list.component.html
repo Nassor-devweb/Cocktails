@@ -5,8 +5,9 @@
     (click)="selectCocktailHandler($event, index)"
     #childrenNode
     [appSelected]="cocktail.name == cocktailSelected.name"
+    [routerLink]="index.toString()"
   >
     {{ cocktail.name }}
   </li>
 </ul>
-<button class="btn btn-primary">Ajouter un Cocktail</button>
+<button routerLink="new" class="btn btn-primary">Ajouter un Cocktail</button>

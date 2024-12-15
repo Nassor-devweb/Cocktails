@@ -104,6 +104,10 @@ export class CocktailService {
     },
   ] as Cocktails[]);
 
+  public getCurrentDetailsCocktails(index: number) {
+    return this.$cocktails.value[index];
+  }
+
   public $cocktailSelected: BehaviorSubject<Cocktails> = new BehaviorSubject(
     this.$cocktails.value[0]
   );

@@ -1,0 +1,49 @@
+<form
+  [formGroup]="cocktailForm"
+  class="flex-fill d-flex flex-column"
+  (ngSubmit)="submit()"
+>
+  <div class="form-group d-flex flex-column">
+    <label for="name">Nom : </label>
+    <input type="text" id="name" />
+  </div>
+  <div class="form-group d-flex flex-column">
+    <label for="img">image : </label>
+    <input type="text" id="img" />
+  </div>
+  <div class="form-group d-flex flex-column">
+    <label for="description">description : </label>
+    <input type="text" id="description" />
+  </div>
+  <div formArrayName="ingredients" class="ingredientsContainer flex-fill">
+    <div
+      *ngFor="let ingredient of ingredients.controls; let index = index"
+      [formGroupName]="index"
+      class="ingredient-group flex-fill"
+    >
+      <div class="ingredient-group__name flex-fill">
+        <label for="ingredientName">nom : </label>
+        <input formControlName="name" class="flex-fill" type="text" />
+      </div>
+      <div class="ingredient-group__quantity flex-fill">
+        <label for="ingredientQuantity">Quantité : </label>
+        <input formControlName="quantity" class="flex-fill" type="text" />
+      </div>
+    </div>
+  </div>
+  <div class="action">
+    <button routerLink="../" class="btn btn-secondary" type="button">
+      Annuler
+    </button>
+    <button
+      class="btn btn-primary"
+      [disabled]="currentNumberIngrdient > 5"
+      (click)="addIngredient()"
+    >
+      Ajouter ingredient
+    </button>
+    <button class="btn btn-primary" [disabled]="!cocktailForm.valid">
+      Valider
+    </button>
+  </div>
+</form>

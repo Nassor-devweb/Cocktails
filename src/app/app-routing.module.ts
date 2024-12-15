@@ -5,15 +5,37 @@ import { PageListComponent } from './pages/page-list/page-list.component';
 import { PageDetailsComponent } from './pages/page-details/page-details.component';
 import { getUserResolver } from './shared/resolver/getUser.resolver';
 import { PanierContainerComponent } from './panier-container/panier-container.component';
+import { CocktailFormComponent } from './cocktails-container/cocktail-form/cocktail-form.component';
+import { CocktailDetailsComponent } from './cocktails-container/cocktail-details/cocktail-details.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: CocktailsContainerComponent,
+    redirectTo: 'cocktails',
+    pathMatch: 'full',
   },
   {
     path: 'cocktails',
     component: CocktailsContainerComponent,
+    children: [
+      {
+        path: 'new',
+        component: CocktailFormComponent,
+      },
+      {
+        path: ':index/edit',
+        component: CocktailFormComponent,
+      },
+      {
+        path: ':index',
+        component: CocktailDetailsComponent,
+      },
+      {
+        path: '',
+        redirectTo: '0',
+        pathMatch: 'full',
+      },
+    ],
   },
   {
     path: 'panier',
@@ -24,11 +46,8 @@ const routes: Routes = [
     component: PageListComponent,
   },
   {
-    path: 'list/:id',
+    path: 'details',
     component: PageDetailsComponent,
-    resolve: {
-      getUserResolver,
-    },
   },
 ];
 

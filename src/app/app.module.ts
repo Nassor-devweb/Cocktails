@@ -19,6 +19,8 @@ import { PageListComponent } from './pages/page-list/page-list.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PanierContainerComponent } from './panier-container/panier-container.component';
 import { IngredientListComponent } from './panier-container/ingredient-list/ingredient-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CocktailFormComponent } from './cocktails-container/cocktail-form/cocktail-form.component';
 
 @NgModule({
   declarations: [
@@ -34,8 +36,9 @@ import { IngredientListComponent } from './panier-container/ingredient-list/ingr
     PageListComponent,
     PanierContainerComponent,
     IngredientListComponent,
+    CocktailFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [provideClientHydration(withEventReplay())],
   bootstrap: [AppComponent],
 })
